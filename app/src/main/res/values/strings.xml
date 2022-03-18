@@ -40,4 +40,43 @@
     <string name="txtEnterNewPass">Enter your new password</string>
     <string name="txtReenterPass">Reenter New Password</string>
     <string name="txtConfirmPass">Confirm</string>
+    <string name="txtAddBookTitle">Add a Book</string>
+    <string name="hintBookTitle">Book Title</string>
+    <string name="hintAuthor">Author</string>
+    <string name="hintIsbn">13-Digit ISBN</string>
+    <string name="hintPublisher">Publisher</string>
+    <string name="hintPublicationYear">Publication Year</string>
+    <string name="rdbGiveaway">Give Away</string>
+    <string name="rdbRentOut">Rent out for:</string>
+    <string name="btnAddBook">Add Book</string>
+    <string-array name="txtGroupRent">
+        <item>$0 per 24H</item>
+        <item>$1 per 24H</item>
+        <item>$2 per 24H</item>
+    </string-array>
+    <string-array name="txtGroupGenres">
+        <item>Genre</item>
+        <item>Fantasy</item>
+        <item>Adventure</item>
+        <item>Romance</item>
+        <item>Dystopian</item>
+        <item>Mystery</item>
+        <item>Horror</item>
+        <item>Thriller</item>
+        <item>Paranormal</item>
+        <item>Historical Fiction</item>
+        <item>Science Fiction</item>
+        <item>Children's</item>
+        <item>Memoir</item>
+        <item>Cooking</item>
+        <item>Art</item>
+        <item>Self-Help</item>
+        <item>Development</item>
+        <item>Health</item>
+        <item>History</item>
+        <item>Travel</item>
+        <item>Guide/How-to</item>
+        <item>Families</item>
+        <item>Humor</item>
+    </string-array>
 </resources>
