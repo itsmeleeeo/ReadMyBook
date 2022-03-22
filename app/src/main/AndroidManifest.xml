@@ -13,6 +13,9 @@
             android:name=".Activity_AddABook"
             android:exported="false" />
         <activity
+            android:name=".DatabaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
