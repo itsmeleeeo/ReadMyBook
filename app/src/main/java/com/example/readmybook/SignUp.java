@@ -11,19 +11,19 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
-    DatabaseHelper databaseHelper;
+   /* DatabaseHelper databaseHelper;
 EditText txtEnterName= findViewById(R.id.txtEnterName);
 EditText txtEmail= findViewById(R.id.txtEmail);
 EditText txtPassSign = findViewById(R.id.txtPassSign);
 EditText txtAddress = findViewById(R.id.txtAddress);
 EditText txtAge = findViewById(R.id.txtAge);
 Button btnRegister = findViewById(R.id.btnRegister);
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        databaseHelper = new DatabaseHelper(this);
+        /*databaseHelper = new DatabaseHelper(this);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             boolean isInserted;
             @Override
@@ -58,6 +58,6 @@ Button btnRegister = findViewById(R.id.btnRegister);
                 }
 
             }
-        });
+        });*/
     }
 }
