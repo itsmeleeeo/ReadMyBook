@@ -31,6 +31,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ForgotPassword.class));
             }
         });
-        //a test
     }
 }
