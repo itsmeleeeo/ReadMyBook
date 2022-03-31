@@ -6,4 +6,131 @@
     android:layout_height="match_parent"
     tools:context=".shareabookadminpage">
 
+    <TextView
+        android:id="@+id/txtadmintoolstitle"
+        android:layout_width="92dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="547dp"
+        android:text="@string/txtadmintools"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtremoveabook"
+        android:layout_width="279dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="487dp"
+        android:text="@string/txtremoveabook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtadmintoolstitle" />
+
+    <TextView
+        android:id="@+id/txtremoveauser"
+        android:layout_width="279dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="438dp"
+        android:text="@string/txtremoveauser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtremoveabook" />
+
+    <TextView
+        android:id="@+id/txtblockauser"
+        android:layout_width="279dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="383dp"
+        android:text="@string/txtblockauser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtremoveauser" />
+
+    <TextView
+        android:id="@+id/txttrack"
+        android:layout_width="279dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="337dp"
+        android:text="@string/txttrack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtblockauser" />
+
+    <RadioButton
+        android:id="@+id/btnpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="237dp"
+        android:text="@string/btnpassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <RadioButton
+        android:id="@+id/btnemail"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="198dp"
+        android:text="@string/btnemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnpassword" />
+
+    <RadioButton
+        android:id="@+id/btnadmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="235dp"
+        android:layout_marginBottom="180dp"
+        android:text="@string/btnadmin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnemail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnconfirmm"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="83dp"
+        android:backgroundTint="#ffde03"
+        android:text="@string/btnconfirmm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnadmin" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
