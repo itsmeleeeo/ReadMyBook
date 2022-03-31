@@ -17,6 +17,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final static String T1COL6 = "Password";
     final static String T1COL7 = "IsAdmin";
 
+    //GENRE TABLE
+    final static String TABLE2_NAME = "Genre";
+    final static String T2COL1 = "GenreId";
+    final static String T2COL2 = "GenreName";
+
+    //Message Table
+    final static String TABLE3_NAME = "Message";
+    final static String T3COL1 = "Id";
+    final static String T3COL2 = "Sender";
+    final static String T3COL3 = "Description";
+    final static String T3COL4 = "Recipient";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         SQLiteDatabase db = this.getWritableDatabase();
@@ -24,11 +36,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "CREATE TABLE " + TABLE1_NAME + "(" + T1COL1 + " INTEGER PRIMARY KEY," +
+        String userQuery = "CREATE TABLE " + TABLE1_NAME + "(" + T1COL1 + " INTEGER PRIMARY KEY," +
                 T1COL2 + " Text," + T1COL3 + " INTEGER," + T1COL4 + " Text," +
                 T1COL5 + " Text," + T1COL6 + " Text," + T1COL7 + " Integer)";
 
-        db.execSQL(query);
+        String genreQuery = "CREATE TABLE " + TABLE2_NAME + "(" + T2COL1 + " INTEGER PRIMARY KEY," +
+                T2COL2 + " Text)";
+
+        /*String messageQuery = "Create Table " + TABLE3_NAME + "(" + T3COL1 + " INTEGER PRIMARY KEY, " +
+                T3COL2 + " TEXT, " + T3COL3 + " TEXT, " + T3COL4 + " TEXT, " + " FOREIGN KEY " + (T1COL1) + "(" + REFERENCES + ")" + TABLE1_NAME + "(" + T1COL1 + ")" ;*/
+
+        db.execSQL(userQuery);
+        db.execSQL(genreQuery);
+        //db.execSQL(messageQuery);
     }
 
     @Override
