@@ -20,6 +20,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#757575"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +40,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#757575"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,14 +56,15 @@
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="@string/txtPasswordSign"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#757575"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <EditText
         android:id="@+id/txtAddress"
@@ -73,14 +76,15 @@
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="@string/txtAddress"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#757575"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassSign"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPassSign" />
 
     <EditText
         android:id="@+id/txtAge"
@@ -92,14 +96,15 @@
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="@string/txtAge"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#757575"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddress"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
