@@ -23,6 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".admin_removebook"
+            android:name=".UserHomePage"
             android:exported="false" />
         <activity
             android:name=".Activity_AddABook"
