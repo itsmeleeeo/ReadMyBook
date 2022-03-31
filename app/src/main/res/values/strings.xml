@@ -49,6 +49,9 @@
     <string name="rdbGiveaway">Give Away</string>
     <string name="rdbRentOut">Rent out for:</string>
     <string name="btnAddBook">Add Book</string>
+    <string name="txtUserNameInfo">Hi Username goes here</string>
+    <string name="txtBooksAvailable">Available Books</string>
+    <string name="txtUpdateBtn">Update an existing book</string>
     <string-array name="txtGroupRent">
         <item>$0 per 24H</item>
         <item>$1 per 24H</item>
