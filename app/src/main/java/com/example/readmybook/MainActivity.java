@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView signUp = findViewById(R.id.txtNoAcc);
         TextView forgotPassword = findViewById(R.id.txtForgotPass);
+        Button btnLogin  = findViewById(R.id.btnLogin);
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ForgotPassword.class));
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, UserHomePage.class));
             }
         });
     }
