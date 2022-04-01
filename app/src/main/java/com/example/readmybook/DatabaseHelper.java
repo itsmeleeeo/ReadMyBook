@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    final static String DATABASE_NAME = "Users.db";
-    final static int DATABASE_VERSION = 1;
+    final static String DATABASE_NAME = "Information.db";
+    final static int DATABASE_VERSION = 3;
     final static String TABLE1_NAME = "Usertable_signup";
     final static String T1COL1 = "Id";
     final static String T1COL2 = "Name";
@@ -17,17 +17,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final static String T1COL6 = "Password";
     final static String T1COL7 = "IsAdmin";
 
-    //GENRE TABLE
-    final static String TABLE2_NAME = "Genre";
-    final static String T2COL1 = "GenreId";
-    final static String T2COL2 = "GenreName";
-
-    //Message Table
-    final static String TABLE3_NAME = "Message";
-    final static String T3COL1 = "Id";
-    final static String T3COL2 = "Sender";
-    final static String T3COL3 = "Description";
-    final static String T3COL4 = "Recipient";
+    final static String TABLE2_NAME="Add_a_book";
+    final static String T2COL1="Book_title";
+    final static String T2COL2 = "Author";
+    final static String T2COL3="ISBN";
+    final static String T2COL4="Publisher";
+    final static String T2COL5="Publication_year";
+    final static String T2COL6="Spinner_data";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -36,28 +32,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String userQuery = "CREATE TABLE " + TABLE1_NAME + "(" + T1COL1 + " INTEGER PRIMARY KEY," +
+        String query = "CREATE TABLE " + TABLE1_NAME + "(" + T1COL1 + " INTEGER PRIMARY KEY," +
                 T1COL2 + " Text," + T1COL3 + " INTEGER," + T1COL4 + " Text," +
                 T1COL5 + " Text," + T1COL6 + " Text," + T1COL7 + " Integer)";
+        db.execSQL(query);
+        String pQuery = "CREATE TABLE " + TABLE2_NAME + "(" + T2COL1 + " Text," + T2COL2 + " Text," + T2COL3 + " INTEGER PRIMARY KEY," + T2COL4 + " Text," + T2COL5 +
+                " INTEGER)";
 
-        String genreQuery = "CREATE TABLE " + TABLE2_NAME + "(" + T2COL1 + " INTEGER PRIMARY KEY," +
-                T2COL2 + " Text)";
-
-        /*String messageQuery = "Create Table " + TABLE3_NAME + "(" + T3COL1 + " INTEGER PRIMARY KEY, " +
-                T3COL2 + " TEXT, " + T3COL3 + " TEXT, " + T3COL4 + " TEXT, " + " FOREIGN KEY " + (T1COL1) + "(" + REFERENCES + ")" + TABLE1_NAME + "(" + T1COL1 + ")" ;*/
-
-        db.execSQL(userQuery);
-        db.execSQL(genreQuery);
-        //db.execSQL(messageQuery);
+        db.execSQL(pQuery);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE " + TABLE1_NAME);
+        db.execSQL("DROP TABLE " + TABLE2_NAME );
         onCreate(db);
     }
 
-    public boolean addRecord(String name,String Email,String PassSign, String Address,String Age,Integer adminornot){
+    public boolean addRecord(String name,String Email,String PassSign, String Address,String Age,int adminornot){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(T1COL2,name);
@@ -73,4 +65,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
 
     }
+    public boolean addBookRecord(String booktitle,String author,String isbn,String publicationyear,String publisher,String spinnergenre){
+        SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
+        ContentValues values= new ContentValues();
+        values.put(T2COL1,booktitle);
+        values.put(T2COL2,author);
+        values.put(T2COL3,isbn);
+        values.put(T2COL4,publisher);
+        values.put(T2COL5,publicationyear);
+        values.put(T2COL6,spinnergenre);
+        long r = sqLiteDatabase.insert(TABLE2_NAME,null,values);
+        if(r>0)
+            return true;
+        else
+            return false;
+    }
+
 }
+
