@@ -80,6 +80,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-
+    public boolean UpdateUserInfo(int id, String e) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(T1COL6, e);
+        int u = sqLiteDatabase.update(TABLE1_NAME,values, "id=?", new String[]{Integer.toString(id)});
+        if(u > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
-
