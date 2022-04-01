@@ -4,70 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserHomePage">
-
-    <Button
-        android:id="@+id/btnAddABook"
-        android:layout_width="209dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="310dp"
-        android:layout_marginEnd="101dp"
-        android:backgroundTint="@color/teal_700"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/txtAddBookTitle"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBooksAvailable" />
-
-    <Button
-        android:id="@+id/btnUpdateABook"
-        android:layout_width="209dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="101dp"
-        android:backgroundTint="@color/teal_700"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/txtUpdateBtn"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddABook" />
+    tools:context=".userHome">
 
     <TextView
-        android:id="@+id/txtUserNameInfo"
+        android:id="@+id/txtHiHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="376dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/txtUserNameInfo"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtHiUH"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtBooksAvailable"
+        android:id="@+id/txtFnameUH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="156dp"
-        android:fontFamily="@font/montserrat"
-        android:text="@string/txtBooksAvailable"
-        android:textColor="@color/black"
-        android:textSize="16sp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="135dp"
+        android:hint="@string/txtHihint"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/txtHiHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAccountUH"
+        android:layout_width="136dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/txtAccountUH"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUserNameInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAbookUH" />
+
+    <Button
+        android:id="@+id/btnAddAbookUH"
+        android:layout_width="136dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtAddABookUH"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHiHome" />
+
+    <Button
+        android:id="@+id/btnGetABookUH"
+        android:layout_width="136dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/txtReadAbookUH"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFnameUH" />
+
+    <Button
+        android:id="@+id/btnLogOutUH"
+        android:layout_width="136dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/txtSettings"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetABookUH" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recVMyBooksUH"
+        android:layout_width="327dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="16dp"
+        android:background="#D6D6D6"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/recycler_view_item" />
+
+    <TextView
+        android:id="@+id/txtMyBooksUH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="161dp"
+        android:text="@string/txtMyBooksUH"
+        android:textColor="@color/teal_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAccountUH" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
