@@ -52,6 +52,13 @@
     <string name="txtUserNameInfo">Hi Username goes here</string>
     <string name="txtBooksAvailable">Available Books</string>
     <string name="txtUpdateBtn">Update an existing book</string>
+    <string name="txtHiUH">Hi </string>
+    <string name="txtHihint">John! </string>
+    <string name="txtAddABookUH">Add A book </string>
+    <string name="txtAccountUH">Account </string>
+    <string name="txtReadAbookUH">Get A book d</string>
+    <string name="txtSettings">Settings</string>
+    <string name="txtMyBooksUH">My Books</string>
     <string-array name="txtGroupRent">
         <item>$0 per 24H</item>
         <item>$1 per 24H</item>
