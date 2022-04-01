@@ -11,41 +11,37 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
-   /* DatabaseHelper databaseHelper;
-EditText txtEnterName= findViewById(R.id.txtEnterName);
-EditText txtEmail= findViewById(R.id.txtEmail);
-EditText txtPassSign = findViewById(R.id.txtPassSign);
-EditText txtAddress = findViewById(R.id.txtAddress);
-EditText txtAge = findViewById(R.id.txtAge);
-Button btnRegister = findViewById(R.id.btnRegister);
-*/
+    DatabaseHelper databaseHelper;
+
+    int admin = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        /*databaseHelper = new DatabaseHelper(this);
+        EditText txtEnterName = findViewById(R.id.txtEnterName);
+        EditText txtEmail = findViewById(R.id.txtEmail);
+        EditText txtPassSign = findViewById(R.id.txtPassSign);
+        EditText txtAddress = findViewById(R.id.txtAddress);
+        EditText txtAge = findViewById(R.id.txtAge);
+        Button btnRegister = findViewById(R.id.btnRegister);
+        databaseHelper = new DatabaseHelper(this);
+        RadioButton rdBtnAdmin = findViewById(R.id.rdBtnAdmin);
+        RadioButton rdBtnUser = findViewById(R.id.rdBtnUser);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             boolean isInserted;
+
             @Override
-
             public void onClick(View v) {
-                RadioButton rdBtnAdmin = findViewById(R.id.rdBtnAdmin);
-                RadioButton rdBtnUser = findViewById(R.id.rdBtnUser);
+                if (rdBtnAdmin.isChecked()) {
+                    admin = 1;
 
-                Integer admin=0;
-                if(rdBtnAdmin.isSelected()){
-                    admin=1;
-                    isInserted = databaseHelper.addRecord(txtEnterName.getText().toString(), txtEmail.getText().toString(),
-                            txtPassSign.getText().toString(), txtAddress.getText().toString(), txtAge.getText().toString() ,admin);
+                } else if (rdBtnUser.isChecked()) {
+                    admin = 0;
+
                 }
-                else
-                if(rdBtnUser.isSelected()){
-                    admin=0;
-                    isInserted = databaseHelper.addRecord(txtEnterName.getText().toString(), txtEmail.getText().toString(),
-                            txtPassSign.getText().toString(), txtAddress.getText().toString(), txtAge.getText().toString() ,admin);
-                }
-
-
+                isInserted = databaseHelper.addRecord(txtEnterName.getText().toString(), txtEmail.getText().toString(),
+                        txtPassSign.getText().toString(), txtAddress.getText().toString(), txtAge.getText().toString(), admin);
 
                 if (isInserted) {
                     Toast.makeText(SignUp.this,
@@ -58,6 +54,6 @@ Button btnRegister = findViewById(R.id.btnRegister);
                 }
 
             }
-        });*/
+        });
     }
 }
