@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
     DatabaseHelper databaseHelper;
-
     int admin = 0;
 
     @Override
