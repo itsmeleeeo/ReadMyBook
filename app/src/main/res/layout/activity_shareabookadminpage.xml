@@ -20,117 +20,121 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtremoveabook"
-        android:layout_width="279dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="487dp"
-        android:text="@string/txtremoveabook"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btnremovebookpage"
+        android:layout_width="165dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="246dp"
+        android:text="@string/btnremoveabookpage"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtadmintoolstitle" />
 
-    <TextView
-        android:id="@+id/txtremoveauser"
-        android:layout_width="279dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="66dp"
+    <Button
+        android:id="@+id/btnremoveauserpage"
+        android:layout_width="157dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/btnremoveauserpage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnremovebookpage"
+        app:layout_constraintTop_toBottomOf="@+id/txtadmintoolstitle" />
+
+    <Button
+        android:id="@+id/btnblockauserpage"
+        android:layout_width="165dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="206dp"
+        android:text="@string/btnblockauserpage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnremovebookpage" />
+
+    <Button
+        android:id="@+id/btntrackabookpage"
+        android:layout_width="156dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="11dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="438dp"
-        android:text="@string/txtremoveauser"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="41dp"
+        android:text="@string/btntrackabookpage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtremoveabook" />
+        app:layout_constraintStart_toEndOf="@+id/btnblockauserpage"
+        app:layout_constraintTop_toBottomOf="@+id/btnremoveauserpage" />
 
-    <TextView
-        android:id="@+id/txtblockauser"
-        android:layout_width="279dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="383dp"
-        android:text="@string/txtblockauser"
+    <Button
+        android:id="@+id/btnconfirmm"
+        android:layout_width="331dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="85dp"
+        android:backgroundTint="#ffdc01"
+        android:text="@string/btnconfirmm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtremoveauser" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/txttrack"
-        android:layout_width="279dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="337dp"
-        android:text="@string/txttrack"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btnblockuserpage"
+        android:layout_width="169dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="200dp"
+        android:text="@string/btnblockuserpage"
+        app:layout_constraintBottom_toTopOf="@+id/btnconfirmm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtblockauser" />
+        app:layout_constraintTop_toBottomOf="@+id/btntrackabookpage" />
 
     <RadioButton
-        android:id="@+id/btnpassword"
+        android:id="@+id/radiobtnpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
-        android:layout_marginEnd="237dp"
-        android:text="@string/btnpassword"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="259dp"
+        android:text="@string/radiobtnpassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
     <RadioButton
-        android:id="@+id/btnemail"
-        android:layout_width="147dp"
+        android:id="@+id/radiobtnemail"
+        android:layout_width="178dp"
         android:layout_height="48dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="198dp"
-        android:text="@string/btnemail"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="195dp"
+        android:layout_marginBottom="94dp"
+        android:text="@string/radiobtnemail"
+        app:layout_constraintBottom_toTopOf="@+id/btnconfirmm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/radiobtnpassword" />
 
     <RadioButton
-        android:id="@+id/btnadmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="235dp"
-        android:layout_marginBottom="180dp"
-        android:text="@string/btnadmin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnemail"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnconfirmm"
-        android:layout_width="300dp"
+        android:id="@+id/radiobtnadminaccess"
+        android:layout_width="177dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="83dp"
-        android:backgroundTint="#ffde03"
-        android:text="@string/btnconfirmm"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="46dp"
+        android:text="@string/radiobtnadminaccess"
+        app:layout_constraintBottom_toTopOf="@+id/btnconfirmm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnadmin" />
+        app:layout_constraintTop_toBottomOf="@+id/radiobtnemail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

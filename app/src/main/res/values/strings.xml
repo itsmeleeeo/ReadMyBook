@@ -71,7 +71,7 @@
     <string name="btnconfirmremove">Confirm</string>
     <string name="txttrackabook">Track A Book</string>
     <string name="bookid">Enter The Book ID</string>
-    <string name="btnconfirmtrack">Confirm</string>
+    <string name="btnconfirmtrack">TRACK</string>
     <string name="txtadmintools">Admin Tools</string>
     <string name="txtremoveabook">Remove a book</string>
     <string name="txtremoveauser">Remove a user</string>
@@ -93,6 +93,30 @@
     <string name="txtReadAbookUH">Get A book d</string>
     <string name="txtSettings">Settings</string>
     <string name="txtMyBooksUH">My Books</string>
+    <string name="btnremoveabookpage">Remove a book</string>
+    <string name="btnremoveauserpage">Remove a user</string>
+    <string name="btnblockauserpage">Block a user</string>
+    <string name="btntrackabookpage">Track a book</string>
+    <string name="radiobtnpassword">Change your password</string>
+    <string name="radiobtnemail">Change your email</string>
+    <string name="radiobtnadminaccess">Revoke Admin Access</string>
+    <string name="btnconfirmm">Confirm</string>
+    <string name="txtremoveuserreason">Reasons:</string>
+    <string name="txtremovereasonn" />
+    <string name="enterreasonremoveuser">Enter the Reason</string>
+    <string name="txtremovebookreason">Reason:</string>
+    <string name="txtremovebook">Enter the reason</string>
+    <string name="btnremovebook">Remove</string>
+    <string name="txtblockuserreason">Reasons:</string>
+    <string name="txtenterreasonblockuser">Enter the reason</string>
+    <string name="radiobtnoneday">Block for 1 day</string>
+    <string name="radiobtnthreedays">Block for 3 days</string>
+    <string name="radiobtnsevendays">Block for 7 days</string>
+    <string name="btnblockuser">Block</string>
+    <string name="btnblockuserpage">Block a user</string>
+    <string name="radiobtnpassword">Change your password</string>
+    <string name="radiobtnemail">Change your email</string>
+    <string name="radiobtnadminaccess">Revoke Admin Access</string>
     <string-array name="txtGroupRent">
         <item>$0 per 24H</item>
         <item>$1 per 24H</item>

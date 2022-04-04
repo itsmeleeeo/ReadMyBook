@@ -18,55 +18,63 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txtenterbookremove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="476dp"
-        android:ems="10"
-        android:hint="bookname"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="@string/enterbookname"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recybook"
+        android:layout_width="374dp"
+        android:layout_height="254dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="302dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtadminremovebooktitle"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/txtadminremovebooktitle" />
 
     <TextView
-        android:id="@+id/txtReason"
-        android:layout_width="61dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="248dp"
-        android:layout_marginBottom="414dp"
-        android:text="@string/txtReason"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/txtremovebookreason"
+        android:layout_width="66dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="328dp"
+        android:layout_marginBottom="37dp"
+        android:text="@string/txtremovebookreason"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtenterbookremove" />
+        app:layout_constraintTop_toBottomOf="@+id/recybook" />
 
     <EditText
-        android:id="@+id/txtstatingreason"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="327dp"
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="356dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="179dp"
         android:ems="10"
-        android:hint="@string/removereason"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:text="@string/txtremovebook"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtReason"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/txtremovebookreason" />
+
+    <Button
+        android:id="@+id/btnconfirmremoveabok"
+        android:layout_width="351dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#ffdd03"
+        android:text="@string/btnremovebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
