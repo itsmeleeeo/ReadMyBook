@@ -2,12 +2,13 @@ package com.example.readmybook;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     final static String DATABASE_NAME = "Information.db";
-    final static int DATABASE_VERSION = 3;
+    final static int DATABASE_VERSION = 4;
     final static String TABLE1_NAME = "Usertable_signup";
     final static String T1COL1 = "Id";
     final static String T1COL2 = "Name";
@@ -25,6 +26,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final static String T2COL5="Publication_year";
     final static String T2COL6="Spinner_data";
 
+    final static String TABLE3_NAME = "Track_a_book";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         SQLiteDatabase db = this.getWritableDatabase();
@@ -36,16 +39,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 T1COL2 + " Text," + T1COL3 + " INTEGER," + T1COL4 + " Text," +
                 T1COL5 + " Text," + T1COL6 + " Text," + T1COL7 + " Integer)";
         db.execSQL(query);
-        String pQuery = "CREATE TABLE " + TABLE2_NAME + "(" + T2COL1 + " Text," + T2COL2 + " Text," + T2COL3 + " INTEGER PRIMARY KEY," + T2COL4 + " Text," + T2COL5 +
-                " INTEGER)";
-
+        String pQuery = "CREATE TABLE " + TABLE2_NAME + "(" + T2COL1 + " Text," + T2COL2 + " Text," + T2COL3 +
+                " INTEGER PRIMARY KEY," + T2COL4 + " Text," + T2COL5 +
+                " INTEGER, " + T2COL6 + " Text)";
         db.execSQL(pQuery);
+        String Query = "CREATE TABLE " + TABLE3_NAME + "(" + T2COL3 + " INTEGER," + "FOREIGN KEY"+ "(" + T2COL3 + ") " + "REFERENCES " +
+        TABLE2_NAME + "(" + T2COL3 + ")" + ")";
+        db.execSQL(Query);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE " + TABLE1_NAME);
         db.execSQL("DROP TABLE " + TABLE2_NAME );
+        db.execSQL("DROP TABLE " + TABLE3_NAME);
         onCreate(db);
     }
 
@@ -75,6 +82,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(T2COL5,publicationyear);
         values.put(T2COL6,spinnergenre);
         long r = sqLiteDatabase.insert(TABLE2_NAME,null,values);
+        if(r>0)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean track_a_book(int isbn){
+        SQLiteDatabase sqLiteDatabase=this.getReadableDatabase();
+        ContentValues values= new ContentValues();
+        values.put(T2COL3,isbn);
+        long r= sqLiteDatabase.insert(TABLE3_NAME,null,values);
         if(r>0)
             return true;
         else

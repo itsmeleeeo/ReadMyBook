@@ -2,6 +2,7 @@ package com.example.readmybook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -12,7 +13,6 @@ import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
     DatabaseHelper databaseHelper;
-
     int admin = 0;
 
     @Override
