@@ -42,6 +42,12 @@ public class Activity_AddABook extends AppCompatActivity {
                             Html.fromHtml("<big>data is inserted successfully</big>"),
                             Toast.LENGTH_SHORT).show();
                     Intent i= new Intent(Activity_AddABook.this,trackabook.class);
+                    txtBookTitleAddABook.setText("");
+                    txtAuthorAB.setText("");
+                    txtIsbnAB.setText("");
+                    txtPublicationYearAB.setText("");
+                    txtPublisherAB.setText("");
+                    startActivity(new Intent(Activity_AddABook.this, UserHomePage.class));
                     i.putExtra("ISBN",isbn_num);
                 } else {
                     Toast.makeText(Activity_AddABook.this,

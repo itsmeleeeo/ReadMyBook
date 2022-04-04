@@ -56,7 +56,7 @@
     <string name="txtHihint">John! </string>
     <string name="txtAddABookUH">Add A book </string>
     <string name="txtAccountUH">Account </string>
-    <string name="txtReadAbookUH">Get A book d</string>
+    <string name="txtReadAbookUH">Get A book</string>
     <string name="txtSettings">Settings</string>
     <string name="txtMyBooksUH">My Books</string>
     <string-array name="txtGroupRent">
