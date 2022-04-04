@@ -79,4 +79,19 @@
         <item>Families</item>
         <item>Humor</item>
     </string-array>
+    <string name="txtHiUH">Hi </string>
+    <string name="txtHihint">John! </string>
+    <string name="txtAddABookUH">Add A book </string>
+    <string name="txtAccountUH">Account </string>
+    <string name="txtReadAbookUH">Get A book d</string>
+    <string name="txtLogOut">Log Out</string>
+    <string name="txtMyBooksUH">My Books</string>
+    <string name="txtSlogenS">Books Worth Spreading</string>
+    <string name="txtUserProfileTitle">User Profile</string>
+    <string name="txtBtnUpdateUP">UPDATE</string>
+    <string name="txtBtnDeleteUP">DELETE ACCOUNT</string>
+    <string name="hintChangeNameUP">Update Your Name</string>
+    <string name="txtMyBookTitle">My Books</string>
+    <string name="txtBtnUpdateBook">UPDATE BOOK</string>
+    <string name="txtBtnDeleteBook">DELETE BOOK</string>
 </resources>
