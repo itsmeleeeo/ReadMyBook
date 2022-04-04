@@ -2,12 +2,13 @@ package com.example.readmybook;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     final static String DATABASE_NAME = "Information.db";
-    final static int DATABASE_VERSION = 3;
+    final static int DATABASE_VERSION = 7;
     final static String TABLE1_NAME = "Usertable_signup";
     final static String T1COL1 = "Id";
     final static String T1COL2 = "Name";
@@ -49,6 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //Add a new user account
     public boolean addRecord(String name,String Email,String PassSign, String Address,String Age,int adminornot){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -86,6 +88,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(T1COL6, e);
         int u = sqLiteDatabase.update(TABLE1_NAME,values, "id=?", new String[]{Integer.toString(id)});
         if(u > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    /*This query shows as invalid user/password*/
+    //String query = "SELECT * FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = ' Email '" + " AND " + T1COL6 + " = ' Password '";
+
+    /*Same error as above one*/
+    //String query = "SELECT " + T1COL5 + ", " + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = " + email + " and " + T1COL6 + " = " + pass;
+
+    public boolean CheckEmailAndPassword(String email, String pass) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        String query = "SELECT " + T1COL5 + ", " + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = " + email + " and " + T1COL6 + " = " + pass;
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        if(cursor.getCount() > 0) {
             return true;
         } else {
             return false;
