@@ -6,4 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".adminremoveuser">
 
+    <TextView
+        android:id="@+id/txtremoveuser"
+        android:layout_width="157dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="545dp"
+        android:text="@string/removeuser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnconfirmremove"
+        android:layout_width="322dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="103dp"
+        android:backgroundTint="#ffdc01"
+        android:text="@string/btnconfirmremove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="361dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="184dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnconfirmremove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtremoveuser" />
+
+    <TextView
+        android:id="@+id/txtremoveuserreason"
+        android:layout_width="81dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="146dp"
+        android:text="@string/txtremoveuserreason"
+        app:layout_constraintBottom_toTopOf="@+id/btnconfirmremove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <EditText
+        android:id="@+id/txtremoveuserreasonn"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/enterreasonremoveuser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtremoveuserreason" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
