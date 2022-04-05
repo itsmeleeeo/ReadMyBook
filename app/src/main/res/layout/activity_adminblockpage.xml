@@ -6,4 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".adminblockpage">
 
+    <TextView
+        android:id="@+id/txtblockuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="556dp"
+        android:text="@string/txtblockuser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyblock"
+        android:layout_width="290dp"
+        android:layout_height="184dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtblockuser" />
+
+    <TextView
+        android:id="@+id/txtblockuserreason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="291dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/txtblockuserreason"
+        app:layout_constraintBottom_toTopOf="@+id/txtblockuserebterreason"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyblock" />
+
+    <EditText
+        android:id="@+id/txtblockuserebterreason"
+        android:layout_width="290dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="64dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txtenterreasonblockuser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtblockuserreason" />
+
+    <RadioButton
+        android:id="@+id/radiobtnonedau"
+        android:layout_width="145dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="243dp"
+        android:text="@string/radiobtnoneday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtblockuserebterreason" />
+
+    <RadioButton
+        android:id="@+id/radiobtnthreedays"
+        android:layout_width="146dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="209dp"
+        android:text="@string/radiobtnthreedays"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiobtnonedau" />
+
+    <RadioButton
+        android:id="@+id/radiobtnsevendays"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="209dp"
+        android:layout_marginBottom="99dp"
+        android:text="@string/radiobtnsevendays"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnblockuser"
+        android:layout_width="294dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#ffdd03"
+        android:text="@string/btnblockuser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiobtnsevendays" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
