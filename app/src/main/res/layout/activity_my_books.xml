@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyBooks">
+
+    <Spinner
+        android:id="@+id/spinRentOutAmountAB"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="35dp"
+        android:entries="@array/txtGroupRent"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rdgroupAddaBook"
+        app:layout_constraintTop_toBottomOf="@+id/spinGenreAB" />
+
+    <Spinner
+        android:id="@+id/spinGenreAB"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:entries="@array/txtGroupGenres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rdgroupAddaBook"
+        app:layout_constraintTop_toBottomOf="@+id/txtPublicationYearAB" />
+
+    <RadioGroup
+        android:id="@+id/rdgroupAddaBook"
+        android:layout_width="161dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPublisherAB">
+
+        <RadioButton
+            android:id="@+id/rdbGiveAwayAB"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/rdbGiveaway" />
+
+        <RadioButton
+            android:id="@+id/rdbRentOutAB"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/rdbRentOut" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txtPublicationYearAB"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="@color/teal_200"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/hintPublicationYear"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtPublisherAB"
+        app:layout_constraintTop_toBottomOf="@+id/txtIsbnAB" />
+
+    <EditText
+        android:id="@+id/txtPublisherAB"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/teal_200"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/hintPublisher"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toStartOf="@+id/txtPublicationYearAB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIsbnAB" />
+
+    <EditText
+        android:id="@+id/txtIsbnAB"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/teal_200"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/hintIsbn"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAuthorAB" />
+
+    <EditText
+        android:id="@+id/txtAuthorAB"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="35dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/teal_200"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/hintAuthor"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtBookTitleAddABook"
+        app:layout_constraintTop_toBottomOf="@+id/recVMyBooksUH" />
+
+    <EditText
+        android:id="@+id/txtBookTitleAddABook"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="11dp"
+        android:autofillHints=""
+        android:backgroundTint="@color/teal_200"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/hintBookTitle"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recVMyBooksUH" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recVMyBooksUH"
+        android:layout_width="336dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/grey"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleMyBooks"
+        tools:listitem="@layout/recycler_view_item" />
+
+    <TextView
+        android:id="@+id/txtTitleMyBooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="280dp"
+        android:text="@string/txtMyBookTitle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDeletBook"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/txtBtnDeleteBook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdgroupAddaBook" />
+
+    <Button
+        android:id="@+id/btnUpdateBook"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="35dp"
+        android:text="@string/txtBtnUpdateBook"
+        android:textColor="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDeletBook"
+        app:layout_constraintTop_toBottomOf="@+id/spinRentOutAmountAB" />
+</androidx.constraintlayout.widget.ConstraintLayout>
