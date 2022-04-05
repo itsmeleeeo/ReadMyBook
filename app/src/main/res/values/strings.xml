@@ -78,9 +78,8 @@
     <string name="txtblockauser">Block a user</string>
     <string name="txttrack">Track a book</string>
     <string name="btnemail">Change your email</string>
-<!--    <string name="btnpassword">Change your password</string>-->
     <string name="btnpassword">Change your password</string>
-<!--    <string name="btnadminaccess">Revoke Admin Access</string>-->
+    <string name="btnadminaccess">Revoke Admin Access</string>
     <string name="btnadmin">Revoke Admin Access</string>
     <string name="btnconfirmm">Confirm</string>
     <string name="txtUserNameInfo">Hi Username goes here</string>
@@ -110,7 +109,6 @@
     <string name="radiobtnpassword">Change your password</string>
     <string name="radiobtnemail">Change your email</string>
     <string name="radiobtnadminaccess">Revoke Admin Access</string>
-    <string name="btnconfirmm">Confirm</string>
     <string name="txtremoveuserreason">Reasons:</string>
     <string name="txtremovereasonn" />
     <string name="enterreasonremoveuser">Enter the Reason</string>
@@ -124,9 +122,6 @@
     <string name="radiobtnsevendays">Block for 7 days</string>
     <string name="btnblockuser">Block</string>
     <string name="btnblockuserpage">Block a user</string>
-    <string name="radiobtnpassword">Change your password</string>
-    <string name="radiobtnemail">Change your email</string>
-    <string name="radiobtnadminaccess">Revoke Admin Access</string>
     <string-array name="txtGroupRent">
         <item>$0 per 24H</item>
         <item>$1 per 24H</item>
