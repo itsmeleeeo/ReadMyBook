@@ -19,7 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final static String T1COL6 = "Password";
     final static String T1COL7 = "IsAdmin";
 
-    final static String TABLE2_NAME="Add_a_book";
+    final static String TABLE2_NAME = "Add_a_book";
     final static String T2COL1="Book_title";
     final static String T2COL2 = "Author";
     final static String T2COL3="ISBN";
@@ -112,7 +112,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
     }
 
-}
     /*Same error as above one*/
     //String query = "SELECT " + T1COL5 + ", " + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = " + email + " and " + T1COL6 + " = " + pass;
 
@@ -121,7 +120,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public boolean CheckEmailAndPassword(String email, String pass) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        String query = "SELECT " + T1COL5 + ", " + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = " + email + " and " + T1COL6 + " = " + pass;
+        String query = "SELECT * FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = ' Email '" + " AND " + T1COL6 + " = ' Password '";
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
         if(cursor.getCount() > 0) {
             return true;
@@ -129,3 +128,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         }
     }
+}

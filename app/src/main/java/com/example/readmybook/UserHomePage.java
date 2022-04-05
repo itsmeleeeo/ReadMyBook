@@ -13,11 +13,35 @@ public class UserHomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home_page);
-        Button button = findViewById(R.id.btnAddAbookUH);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button btnAdd = findViewById(R.id.btnAddAbookUH);
+        Button btnSettings = findViewById(R.id.btnLogOutUH);
+        Button btnAccount = findViewById(R.id.btnAccountUH);
+        Button btnGetBook = findViewById(R.id.btnGetABookUH);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(UserHomePage.this,Activity_AddABook.class));
+            }
+        });
+
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserHomePage.this, SettingUp.class));
+            }
+        });
+
+        btnAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserHomePage.this, AccountActivity.class));
+            }
+        });
+
+        btnGetBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserHomePage.this, GetBookActivity.class));
             }
         });
     }
