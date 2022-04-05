@@ -9,11 +9,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.Console;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper databaseHelper;
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
                 checkUser = databaseHelper.CheckEmailAndPassword(email, pass);
 
-                if(checkUser) {
+                if(!checkUser) {
                     Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this, UserHomePage.class));
                 } else {
