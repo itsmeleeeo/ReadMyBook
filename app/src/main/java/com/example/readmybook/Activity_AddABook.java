@@ -2,6 +2,7 @@ package com.example.readmybook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.text.Html;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 
 public class Activity_AddABook extends AppCompatActivity {
     DatabaseHelper databaseHelper;
-
+    int isbn_num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -34,11 +35,14 @@ public class Activity_AddABook extends AppCompatActivity {
             public void onClick(View view) {
                 isInserted_book=databaseHelper.addBookRecord(txtBookTitleAddABook.getText().toString(),txtAuthorAB.getText().toString(),txtIsbnAB.getText().toString(),
                         txtPublicationYearAB.getText().toString(), txtPublisherAB.getText().toString(),SpinnerGenre.getSelectedItem().toString());
-//                SpinnerGenre.getSelectedItem().toString();
+
                 if (isInserted_book) {
+                    isbn_num=Integer.parseInt(txtIsbnAB.getText().toString());
                     Toast.makeText(Activity_AddABook.this,
                             Html.fromHtml("<big>data is inserted successfully</big>"),
                             Toast.LENGTH_SHORT).show();
+                    Intent i= new Intent(Activity_AddABook.this,trackabook.class);
+                    i.putExtra("ISBN",isbn_num);
                 } else {
                     Toast.makeText(Activity_AddABook.this,
                             Html.fromHtml("<big>data is not inserted</big>"),

@@ -13,7 +13,7 @@ public class UserHomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home_page);
-        Button button=findViewById(R.id.btnAddAbookUH);
+        Button button = findViewById(R.id.btnAddAbookUH);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

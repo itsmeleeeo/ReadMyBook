@@ -147,4 +147,5 @@
         <item>Families</item>
         <item>Humor</item>
     </string-array>
+    <string name="track_a_book">Track a book</string>
 </resources>
