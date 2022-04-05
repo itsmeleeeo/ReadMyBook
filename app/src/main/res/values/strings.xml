@@ -93,6 +93,16 @@
     <string name="txtReadAbookUH">Get A book d</string>
     <string name="txtSettings">Settings</string>
     <string name="txtMyBooksUH">My Books</string>
+    <string name="txtLogOut">Log Out</string>
+    <string name="txtSlogenS">Books Worth Spreading</string>
+    <string name="txtUserProfileTitle">User Profile</string>
+    <string name="txtBtnUpdateUP">UPDATE</string>
+    <string name="txtBtnDeleteUP">DELETE ACCOUNT</string>
+    <string name="hintChangeNameUP">Update Your Name</string>
+    <string name="txtMyBookTitle">My Books</string>
+    <string name="txtBtnUpdateBook">UPDATE BOOK</string>
+    <string name="txtBtnDeleteBook">DELETE BOOK</string>
+    <string name="track_a_book">Track a book</string>
     <string name="btnremoveabookpage">Remove a book</string>
     <string name="btnremoveauserpage">Remove a user</string>
     <string name="btnblockauserpage">Block a user</string>
@@ -147,5 +157,4 @@
         <item>Families</item>
         <item>Humor</item>
     </string-array>
-    <string name="track_a_book">Track a book</string>
 </resources>
