@@ -26,6 +26,9 @@
         </activity>
         <activity
             android:name=".userHome"
+        android:theme="@style/Theme.ReadMyBook">
+        <activity
+            android:name=".UserHomePage"
             android:exported="false" />
         <activity
             android:name=".Activity_AddABook"
