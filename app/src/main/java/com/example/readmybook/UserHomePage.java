@@ -15,12 +15,13 @@ public class UserHomePage extends AppCompatActivity {
         setContentView(R.layout.activity_user_home_page);
         Button btnAdd = findViewById(R.id.btnAddAbookUH);
         Button btnSettings = findViewById(R.id.btnLogOutUH);
-        Button btnAccount = findViewById(R.id.btnAccountUH);
+        Button btnLogout = findViewById(R.id.btnLogout);
         Button btnGetBook = findViewById(R.id.btnGetABookUH);
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserHomePage.this,Activity_AddABook.class));
+                startActivity(new Intent(UserHomePage.this, Activity_AddABook.class));
             }
         });
 
@@ -31,10 +32,10 @@ public class UserHomePage extends AppCompatActivity {
             }
         });
 
-        btnAccount.setOnClickListener(new View.OnClickListener() {
+        btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserHomePage.this, AccountActivity.class));
+                startActivity(new Intent(UserHomePage.this, MainActivity.class));
             }
         });
 
