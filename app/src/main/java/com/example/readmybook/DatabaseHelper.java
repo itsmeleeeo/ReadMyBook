@@ -90,11 +90,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-    public boolean UpdateUserInfo(String email, String pass) {
+    public boolean ForgotPassword(String email, String pass) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
+        values.put(T1COL5, email);
         values.put(T1COL6, pass);
-        long u = sqLiteDatabase.update(TABLE1_NAME,values, "email=?", new String[]{email});
+        long u = sqLiteDatabase.update(TABLE1_NAME,values, "email=?", new String[]{email, pass});
         if(u > 0) {
             return true;
         } else {

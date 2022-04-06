@@ -22,9 +22,9 @@ public class ForgotPassword extends AppCompatActivity {
         EditText fpNewPass = findViewById(R.id.txtEnterNewPass);
         EditText fpReEnterNewPass = findViewById(R.id.txtReenterNewPass);
         Button btnConfirm = findViewById(R.id.btnChangePass);
+        databaseHelper = new DatabaseHelper(this);
 
         btnConfirm.setOnClickListener(new View.OnClickListener() {
-            boolean isUpdated;
             @Override
             public void onClick(View view) {
                 String email = fpEmail.getText().toString();
@@ -34,7 +34,7 @@ public class ForgotPassword extends AppCompatActivity {
                 if(newPass.equals("") || repNewPass.equals("")) {
                     Toast.makeText(ForgotPassword.this, "None of the fields cannot be blank", Toast.LENGTH_SHORT).show();
                 } else if(newPass == repNewPass){
-                    isUpdated = databaseHelper.UpdateUserInfo(email, newPass);
+                    boolean isUpdated = databaseHelper.ForgotPassword(email, newPass);
                     if(isUpdated) {
                         Toast.makeText(ForgotPassword.this, "Password Changed", Toast.LENGTH_SHORT).show();
                     } else {
