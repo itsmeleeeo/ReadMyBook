@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 public class Activity_AddABook extends AppCompatActivity {
     DatabaseHelper databaseHelper;
-    Button btnAddBook = findViewById(R.id.btnAddBookAB);
     int isbn_num;
 
     @Override
@@ -30,7 +29,7 @@ public class Activity_AddABook extends AppCompatActivity {
         Button btnAddBookAB = findViewById(R.id.btnAddBookAB);
         Spinner SpinnerGenre = findViewById(R.id.spinGenreAB);
 
-        btnAddBook.setOnClickListener(new View.OnClickListener() {
+        btnAddBookAB.setOnClickListener(new View.OnClickListener() {
             boolean isInserted_book;
 
             @Override
@@ -44,13 +43,13 @@ public class Activity_AddABook extends AppCompatActivity {
                             Html.fromHtml("<big>data is inserted successfully</big>"),
                             Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(Activity_AddABook.this, trackabook.class);
+                    i.putExtra("ISBN", isbn_num);
                     txtBookTitleAddABook.setText("");
                     txtAuthorAB.setText("");
                     txtIsbnAB.setText("");
                     txtPublicationYearAB.setText("");
                     txtPublisherAB.setText("");
                     startActivity(new Intent(Activity_AddABook.this, UserHomePage.class));
-                    i.putExtra("ISBN", isbn_num);
                 } else {
                     Toast.makeText(Activity_AddABook.this,
                             Html.fromHtml("<big>data is not inserted</big>"),

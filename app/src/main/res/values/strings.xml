@@ -85,7 +85,7 @@
     <string name="txtUserNameInfo">Hi Username goes here</string>
     <string name="txtBooksAvailable">Available Books</string>
     <string name="txtUpdateBtn">Update an existing book</string>
-    <string name="txtHiUH">Hi </string>
+    <string name="txtHiUH">Hello, Reader</string>
     <string name="txtHihint">John! </string>
     <string name="txtAddABookUH">Add A book </string>
     <string name="txtAccountUH">Account </string>
