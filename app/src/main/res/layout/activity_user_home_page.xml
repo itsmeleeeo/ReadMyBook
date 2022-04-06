@@ -20,15 +20,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnAccountUH"
+        android:id="@+id/btnLogout"
         android:layout_width="136dp"
         android:layout_height="127dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
-        android:text="@string/txtAccountUH"
+        android:layout_marginEnd="40dp"
+        android:text="@string/txtLogOut"
         android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddAbookUH" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetABookUH" />
 
     <Button
         android:id="@+id/btnAddAbookUH"
@@ -38,6 +39,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/txtAddABookUH"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHiHome" />
 
@@ -49,6 +51,7 @@
         android:layout_marginEnd="40dp"
         android:text="@string/txtReadAbookUH"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHiHome" />
 
@@ -56,12 +59,13 @@
         android:id="@+id/btnLogOutUH"
         android:layout_width="136dp"
         android:layout_height="127dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
         android:text="@string/txtSettings"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGetABookUH" />
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddAbookUH" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recVMyBooksUH"
@@ -90,6 +94,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAccountUH" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
