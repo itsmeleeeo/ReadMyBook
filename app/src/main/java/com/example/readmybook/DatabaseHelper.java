@@ -123,4 +123,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         }
     }
+
+    public boolean UpdateAllUserInfo(String email,String name,String PassSign, String Address,String Age ){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(T1COL2,name);
+        values.put(T1COL3,Age);
+        values.put(T1COL4,Address);
+        values.put(T1COL6,PassSign);
+        long u = sqLiteDatabase.update(TABLE1_NAME,values, "email=?", new String[]{email});
+        if(u > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public boolean DeleteUserProfile(String email){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        long j = sqLiteDatabase.delete(TABLE1_NAME,"email=?",new String[]{email});
+        if(j > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
