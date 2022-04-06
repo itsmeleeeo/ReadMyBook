@@ -17,10 +17,11 @@ public class UserHomePage extends AppCompatActivity {
         Button btnSettings = findViewById(R.id.btnLogOutUH);
         Button btnAccount = findViewById(R.id.btnAccountUH);
         Button btnGetBook = findViewById(R.id.btnGetABookUH);
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(UserHomePage.this,Activity_AddABook.class));
+                startActivity(new Intent(UserHomePage.this, Activity_AddABook.class));
             }
         });
 

@@ -6,10 +6,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     final static String DATABASE_NAME = "Information.db";
-    final static int DATABASE_VERSION = 8;
+    final static int DATABASE_VERSION = 9;
     final static String TABLE1_NAME = "Usertable_signup";
     final static String T1COL1 = "Id";
     final static String T1COL2 = "Name";
@@ -89,11 +90,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-    public boolean UpdateUserInfo(int id, String e) {
+    public boolean UpdateUserInfo(String email, String pass) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(T1COL6, e);
-        int u = sqLiteDatabase.update(TABLE1_NAME,values, "id=?", new String[]{Integer.toString(id)});
+        values.put(T1COL6, pass);
+        long u = sqLiteDatabase.update(TABLE1_NAME,values, "email=?", new String[]{email});
         if(u > 0) {
             return true;
         } else {
@@ -112,15 +113,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
     }
 
-    /*Same error as above one*/
-    //String query = "SELECT " + T1COL5 + ", " + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = " + email + " and " + T1COL6 + " = " + pass;
-
-    /*This query shows as invalid user/password*/
-    //String query = "SELECT * FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = ' Email '" + " AND " + T1COL6 + " = ' Password '";
-
-    public boolean CheckEmailAndPassword(String email, String pass) {
+    public boolean CheckEmailAndPassword(String email, String password) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = ' Email '" + " AND " + T1COL6 + " = ' Password '";
+        String query = "SELECT " + T1COL5 + "," + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " =  email " + " AND " + T1COL6 + " =  password ";
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
         if(cursor.getCount() > 0) {
             return true;
