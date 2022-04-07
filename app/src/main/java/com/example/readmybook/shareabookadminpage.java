@@ -37,7 +37,7 @@ public class shareabookadminpage extends AppCompatActivity {
         btnblockuser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(shareabookadminpage.this, AccountActivity.class));
+                startActivity(new Intent(shareabookadminpage.this, SettingUp.class));
             }
         });
 
