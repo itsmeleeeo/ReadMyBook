@@ -45,7 +45,7 @@ public class Activity_AddABook extends AppCompatActivity {
                                      Html.fromHtml("<big>data is inserted successfully</big>"),
                                      Toast.LENGTH_SHORT).show();
                              try {
-                                 Intent i = new Intent(Activity_AddABook.this, trackabook.class);
+                                 Intent i = new Intent(Activity_AddABook.this, UserHomePage.class);
                                  i.putExtra("ISBN", String.valueOf(isbn_num));
                                  startActivity(i);
                              } catch (Exception e) {
