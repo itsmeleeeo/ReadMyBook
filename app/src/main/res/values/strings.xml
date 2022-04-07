@@ -91,7 +91,7 @@
     <string name="txtAccountUH">Account </string>
     <string name="txtReadAbookUH">Get A book</string>
     <string name="txtSettings">Settings</string>
-    <string name="txtMyBooksUH">My Books</string>
+    <string name="txtMyBooksUH">Featured Books</string>
     <string name="txtLogOut">Log Out</string>
     <string name="txtSlogenS">Books Worth Spreading</string>
     <string name="txtUserProfileTitle">User Profile</string>
@@ -122,6 +122,12 @@
     <string name="radiobtnsevendays">Block for 7 days</string>
     <string name="btnblockuser">Block</string>
     <string name="btnblockuserpage">Block a user</string>
+    <string name="trackabookisbn">Enter the ISBN</string>
+    <string name="trackabookmessage" />
+    <string name="adminbtnlogout">Logout</string>
+    <string name="btngetabook">Get Book</string>
+    <string name="enterisbngetbook">Please Enter ISBN</string>
+    <string name="btnfindbook">Coming Soon!</string>
     <string-array name="txtGroupRent">
         <item>$0 per 24H</item>
         <item>$1 per 24H</item>

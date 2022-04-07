@@ -83,20 +83,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btnblockuserpage"
-        android:layout_width="169dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="200dp"
-        android:text="@string/btnblockuserpage"
-        app:layout_constraintBottom_toTopOf="@+id/btnconfirmm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btntrackabookpage" />
-
     <RadioButton
         android:id="@+id/radiobtnpassword"
         android:layout_width="wrap_content"
@@ -136,5 +122,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radiobtnemail" />
+
+    <Button
+        android:id="@+id/btnlogout"
+        android:layout_width="121dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/adminbtnlogout"
+        app:layout_constraintBottom_toTopOf="@+id/radiobtnpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btntrackabookpage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
