@@ -128,6 +128,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+
     public boolean UpdateAllUserInfo(String email,String name,String PassSign, String Address,String Age ){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();

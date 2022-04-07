@@ -20,6 +20,7 @@ public class UserHomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home_page);
+
         Button btnAdd = findViewById(R.id.btnAddAbookUH);
         Button btnSettings = findViewById(R.id.btnLogOutUH);
         Button btnLogout = findViewById(R.id.btnLogout);
