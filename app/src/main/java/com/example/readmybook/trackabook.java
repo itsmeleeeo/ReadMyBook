@@ -19,7 +19,7 @@ public class trackabook extends AppCompatActivity {
         databaseHelper= new DatabaseHelper(this);
         Intent i = getIntent();
         if (i!=null){
-             isbn= Long.parseLong(getIntent().getStringExtra("ISBN"));
+            isbn= Long.parseLong(getIntent().getStringExtra("ISBN"));
         }
 
         Button btn_tracker=findViewById(R.id.btn_tracker);
@@ -27,15 +27,15 @@ public class trackabook extends AppCompatActivity {
             boolean is_tracking;
             @Override
             public void onClick(View view) {
-             is_tracking=databaseHelper.track_a_book(isbn);
+                is_tracking=databaseHelper.track_a_book(isbn);
 
                 if (is_tracking) {
                     Toast.makeText(trackabook.this,
-                            Html.fromHtml("<big>data is inserted successfully</big>"),
+                            Html.fromHtml("<big>Your books are successfully saved.</big>"),
                             Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(trackabook.this,
-                            Html.fromHtml("<big>data is not inserted</big>"),
+                            Html.fromHtml("<big>Your books are not saved.</big>"),
                             Toast.LENGTH_SHORT).show();
                 }
             }
