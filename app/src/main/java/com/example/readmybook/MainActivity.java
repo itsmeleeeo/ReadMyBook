@@ -30,11 +30,13 @@ public class MainActivity extends AppCompatActivity {
         TextView forgotPassword = findViewById(R.id.txtForgotPass);
         EditText emailLogin = findViewById(R.id.txtInputEmail);
         EditText passLogin = findViewById(R.id.txtInputPassword);
+
         databaseHelper = new DatabaseHelper(this);
 
         Button btnLogin  = findViewById(R.id.btnLogin);
 
         signUp.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,SignUp.class));
@@ -48,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 String email = emailLogin.getText().toString();
                 String pass = passLogin.getText().toString();
-
                 if(email.equals("") || pass.equals("")) {
                     Toast.makeText(MainActivity.this, "There are empty fields. Make sure you fill them out", Toast.LENGTH_SHORT).show();
                 }
@@ -61,11 +64,58 @@ public class MainActivity extends AppCompatActivity {
                 boolean checkUser = databaseHelper.CheckEmailAndPassword(email,pass);
                 if(checkUser) {
                     Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this, UserHomePage.class));
+         startActivity(new Intent(MainActivity.this, UserHomePage.class));
+//                    startActivity(new Intent(MainActivity.this, shareabookadminpage.class));
                 } else {
                     Toast.makeText(MainActivity.this, "The email or password is incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*  btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = emailLogin.getText().toString();
+                String pass = passLogin.getText().toString();
+
+                if (email.equals("") || pass.equals("")) {
+                    Toast.makeText(MainActivity.this, "There are empty fields. Make sure you fill them out", Toast.LENGTH_SHORT).show();
+                }
+
+                boolean checkUser = databaseHelper.CheckEmailAndPassword(email, pass);
+//                boolean adminCheck = databaseHelper.CheckUserAdmin(email, pass);
+                if (checkUser) {
+
+                   if(){
+                        Toast.makeText(MainActivity.this, "Admin Login Success", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, shareabookadminpage.class));
+                    }else{
+                        Toast.makeText(MainActivity.this, "User login Success", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, UserHomePage.class));
+                    }
+
+                } else {
+                    Toast.makeText(MainActivity.this, "The email or password is incorrect", Toast.LENGTH_SHORT).show();
+                }
+
+
+       };
+
+});
+    }
+}*/
