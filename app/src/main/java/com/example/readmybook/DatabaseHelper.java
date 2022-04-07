@@ -23,12 +23,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final static String T1COL7 = "IsAdmin";
 
     final static String TABLE2_NAME = "Add_a_book";
-    final static String T2COL1="Book_title";
+    final static String T2COL1 = "Book_title";
     final static String T2COL2 = "Author";
-    final static String T2COL3="ISBN";
-    final static String T2COL4="Publisher";
-    final static String T2COL5="Publication_year";
-    final static String T2COL6="Spinner_data";
+    final static String T2COL3 = "ISBN";
+    final static String T2COL4 = "Publisher";
+    final static String T2COL5 = "Publication_year";
+    final static String T2COL6 = "Spinner_data";
 
     final static String TABLE3_NAME = "Track_a_book";
 
@@ -47,47 +47,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " INTEGER PRIMARY KEY," + T2COL4 + " Text," + T2COL5 +
                 " INTEGER, " + T2COL6 + " Text)";
         db.execSQL(pQuery);
-        String Query = "CREATE TABLE " + TABLE3_NAME + "(" + T2COL3 + " INTEGER," + "FOREIGN KEY"+ "(" + T2COL3 + ") " + "REFERENCES " +
-        TABLE2_NAME + "(" + T2COL3 + ")" + ")";
+        String Query = "CREATE TABLE " + TABLE3_NAME + "(" + T2COL3 + " INTEGER," + "FOREIGN KEY" + "(" + T2COL3 + ") " + "REFERENCES " +
+                TABLE2_NAME + "(" + T2COL3 + ")" + ")";
         db.execSQL(Query);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE " + TABLE1_NAME);
-        db.execSQL("DROP TABLE " + TABLE2_NAME );
+        db.execSQL("DROP TABLE " + TABLE2_NAME);
         db.execSQL("DROP TABLE " + TABLE3_NAME);
         onCreate(db);
     }
 
     //Add a new user account
-    public boolean addRecord(String name,String Email,String PassSign, String Address,String Age,int adminornot){
+    public boolean addRecord(String name, String Email, String PassSign, String Address, String Age, int adminornot) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(T1COL2,name);
-        values.put(T1COL3,Age);
-        values.put(T1COL4,Address);
-        values.put(T1COL5,Email);
-        values.put(T1COL6,PassSign);
-        values.put(T1COL7,adminornot);
-        long r = sqLiteDatabase.insert(TABLE1_NAME,null,values);
-        if(r>0)
+        values.put(T1COL2, name);
+        values.put(T1COL3, Age);
+        values.put(T1COL4, Address);
+        values.put(T1COL5, Email);
+        values.put(T1COL6, PassSign);
+        values.put(T1COL7, adminornot);
+        long r = sqLiteDatabase.insert(TABLE1_NAME, null, values);
+        if (r > 0)
             return true;
         else
             return false;
 
     }
-    public boolean addBookRecord(String booktitle,String author,String isbn,String publicationyear,String publisher,String spinnergenre){
-        SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
-        ContentValues values= new ContentValues();
-        values.put(T2COL1,booktitle);
-        values.put(T2COL2,author);
-        values.put(T2COL3,isbn);
-        values.put(T2COL4,publisher);
-        values.put(T2COL5,publicationyear);
-//        values.put(T2COL6,spinnergenre);
-        long r = sqLiteDatabase.insert(TABLE2_NAME,null,values);
-        if(r>0)
+
+    public boolean addBookRecord(String booktitle, String author, String isbn, String publicationyear, String publisher, String spinnergenre) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(T2COL1, booktitle);
+        values.put(T2COL2, author);
+        values.put(T2COL3, isbn);
+        values.put(T2COL4, publisher);
+        values.put(T2COL5, publicationyear);
+        values.put(T2COL6, spinnergenre);
+        long r = sqLiteDatabase.insert(TABLE2_NAME, null, values);
+        if (r > 0)
             return true;
         else
             return false;
@@ -105,12 +106,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean track_a_book(int isbn){
-        SQLiteDatabase sqLiteDatabase=this.getReadableDatabase();
-        ContentValues values= new ContentValues();
-        values.put(T2COL3,isbn);
-        long r= sqLiteDatabase.insert(TABLE3_NAME,null,values);
-        if(r>0)
+    public boolean track_a_book(long isbn) {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(T2COL3, isbn);
+        long r = sqLiteDatabase.insert(TABLE3_NAME, null, values);
+        if (r > 0)
             return true;
         else
             return false;
@@ -120,12 +121,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         String query = "SELECT " + T1COL5 + "," + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " =  email " + " AND " + T1COL6 + " =  password ";
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
-        if(cursor.getCount() > 0) {
+        if (cursor.getCount() > 0) {
             return true;
         } else {
             return false;
         }
     }
+
 
     public boolean UpdateAllUserInfo(String email,String name,String PassSign, String Address,String Age ){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();

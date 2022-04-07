@@ -122,6 +122,9 @@
     <string name="radiobtnsevendays">Block for 7 days</string>
     <string name="btnblockuser">Block</string>
     <string name="btnblockuserpage">Block a user</string>
+    <string name="trackabookisbn">Enter the ISBN</string>
+    <string name="trackabookmessage" />
+    <string name="adminbtnlogout">Logout</string>
     <string-array name="txtGroupRent">
         <item>$0 per 24H</item>
         <item>$1 per 24H</item>
