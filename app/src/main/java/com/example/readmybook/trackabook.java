@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class trackabook extends AppCompatActivity {
     DatabaseHelper databaseHelper;
-    int isbn;
+    long isbn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +19,7 @@ public class trackabook extends AppCompatActivity {
         databaseHelper= new DatabaseHelper(this);
         Intent i = getIntent();
         if (i!=null){
-             isbn= getIntent().getIntExtra("ISBN",0);
+             isbn= Long.parseLong(getIntent().getStringExtra("ISBN"));
         }
 
         Button btn_tracker=findViewById(R.id.btn_tracker);
