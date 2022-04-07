@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     final static String DATABASE_NAME = "Information.db";
     final static int DATABASE_VERSION = 9;
@@ -149,5 +151,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } else {
             return false;
         }
+    }
+
+    // we have created a new method for reading all the Books.
+    public ArrayList<CourseModal> readBooks() {
+        // on below line we are creating a
+        // database for reading our database.
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // on below line we are creating a cursor with query to read data from database.
+        Cursor cursorBooks = db.rawQuery("SELECT * FROM " + TABLE2_NAME, null);
+
+        // on below line we are creating a new array list.
+        ArrayList<CourseModal> courseModalArrayList = new ArrayList<>();
+
+        // moving our cursor to first position.
+        if (cursorBooks.moveToFirst()) {
+            do {
+                // on below line we are adding the data from cursor to our array list.
+                courseModalArrayList.add(new CourseModal(cursorBooks.getString(1),
+                        cursorBooks.getString(2),
+                        cursorBooks.getString(3)));
+            } while (cursorBooks.moveToNext());
+            // moving our cursor to next.
+        }
+        // at last closing our cursor
+        // and returning our array list.
+        cursorBooks.close();
+        return courseModalArrayList;
     }
 }
