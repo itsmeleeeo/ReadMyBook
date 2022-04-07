@@ -120,6 +120,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean CheckEmailAndPassword(String email, String password) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         String query = "SELECT " + T1COL5 + "," + T1COL6 + " FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " =  email " + " AND " + T1COL6 + " =  password ";
+//        "SELECT * FROM " + TABLE1_NAME + " WHERE " + T1COL5 + " = ' Email '" + " AND " + T1COL6 + " = ' Password '";
+
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
         if (cursor.getCount() > 0) {
             return true;

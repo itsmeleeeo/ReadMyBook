@@ -13,13 +13,7 @@
             android:name=".MyBooks"
             android:exported="false" />
         <activity
-            android:name=".UserProfile"
-            android:exported="false" />
-        <activity
             android:name=".GetBookActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AccountActivity"
             android:exported="false" />
         <activity
             android:name=".SettingUp"

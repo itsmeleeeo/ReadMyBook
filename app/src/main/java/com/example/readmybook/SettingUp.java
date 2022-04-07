@@ -53,7 +53,7 @@ public class SettingUp extends AppCompatActivity {
                 isDeleted = databaseHelper.DeleteUserProfile(txtEmail.getText().toString());
                 if (isDeleted)  {
                     Toast.makeText(SettingUp.this, Html.fromHtml("<big>User Has been Removed</big>"),Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(SettingUp.this, UserHomePage.class));
+                    startActivity(new Intent(SettingUp.this, MainActivity.class));
                 }
                 else {
                     Toast.makeText(SettingUp.this,
