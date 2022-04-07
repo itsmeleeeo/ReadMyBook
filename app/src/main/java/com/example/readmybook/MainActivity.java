@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 boolean checkUser = databaseHelper.CheckEmailAndPassword(email,pass);
                 if(checkUser) {
                     Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
-//                    startActivity(new Intent(MainActivity.this, UserHomePage.class));
-                    startActivity(new Intent(MainActivity.this, shareabookadminpage.class));
+         startActivity(new Intent(MainActivity.this, UserHomePage.class));
+//                    startActivity(new Intent(MainActivity.this, shareabookadminpage.class));
                 } else {
                     Toast.makeText(MainActivity.this, "The email or password is incorrect", Toast.LENGTH_SHORT).show();
                 }
