@@ -125,6 +125,9 @@
     <string name="trackabookisbn">Enter the ISBN</string>
     <string name="trackabookmessage" />
     <string name="adminbtnlogout">Logout</string>
+    <string name="btngetabook">Get Book</string>
+    <string name="enterisbngetbook">Please Enter ISBN</string>
+    <string name="btnfindbook">Coming Soon!</string>
     <string-array name="txtGroupRent">
         <item>$0 per 24H</item>
         <item>$1 per 24H</item>
