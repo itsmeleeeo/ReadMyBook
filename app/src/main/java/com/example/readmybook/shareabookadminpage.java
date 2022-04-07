@@ -15,9 +15,10 @@ public class shareabookadminpage extends AppCompatActivity {
         setContentView(R.layout.activity_shareabookadminpage);
 
         Button btnremoveabook = findViewById(R.id.btnremovebookpage);
-        Button btnremoveuser = findViewById(R.id.btnremoveauserpage;
+        Button btnremoveuser = findViewById(R.id.btnremoveauserpage);
         Button btnblockuser = findViewById(R.id.btnblockauserpage);
         Button btntrackabook = findViewById(R.id.btntrackabookpage);
+        Button btnlogout = findViewById(R.id.btnlogout);
 
         btnremoveabook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,15 @@ public class shareabookadminpage extends AppCompatActivity {
                 startActivity(new Intent(shareabookadminpage.this, trackabook.class));
             }
         });
+
+        btnlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent (shareabookadminpage.this, MainActivity.class));
+            }
+        });
+
+
     }
 }
 
