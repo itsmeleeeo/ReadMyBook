@@ -19,12 +19,12 @@ public class Activity_AddABook extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_abook);
-        databaseHelper= new DatabaseHelper(this);
-        EditText txtBookTitleAddABook= findViewById(R.id.txtBookTitleAddABook);
-        EditText txtAuthorAB= findViewById(R.id.txtAuthorAB);
+
+        EditText txtBookTitleAddABook = findViewById(R.id.txtBookTitleAddABook);
+        EditText txtAuthorAB = findViewById(R.id.txtAuthorAB);
         EditText txtPublicationYearAB = findViewById(R.id.txtPublicationYearAB);
         EditText txtPublisherAB = findViewById(R.id.txtPublisherAB);
-        EditText txtIsbnAB= findViewById(R.id.txtIsbnAB);
+        EditText txtIsbnAB = findViewById(R.id.txtIsbnAB);
         Button btnAddBookAB = findViewById(R.id.btnAddBookAB);
         Spinner SpinnerGenre = findViewById(R.id.spinGenreAB);
 
