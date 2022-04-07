@@ -19,7 +19,7 @@ public class Activity_AddABook extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_abook);
-
+        databaseHelper = new DatabaseHelper(this);
         EditText txtBookTitleAddABook = findViewById(R.id.txtBookTitleAddABook);
         EditText txtAuthorAB = findViewById(R.id.txtAuthorAB);
         EditText txtPublicationYearAB = findViewById(R.id.txtPublicationYearAB);
